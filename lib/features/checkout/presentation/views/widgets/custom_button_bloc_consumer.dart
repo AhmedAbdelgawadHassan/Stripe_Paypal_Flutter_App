@@ -20,16 +20,14 @@ class CustomButtonBlocConsumer extends StatelessWidget {
           title: 'Continue',
           isLoading: state is PaymentLoading ? true : false,
           onTap: () {
-
-            if(isPaypal){
-                var transactionsData =getTransactionData(); // call method in this variable
-            executePaypalMethod(context, transactionsData);
+            if (isPaypal) {
+              var transactionsData =
+                  getTransactionData(); // call method in this variable
+              executePaypalMethod(context, transactionsData);
+            } else {
+              executeStripeMethod(context);
             }
-            else {
-            executeStripeMethod(context);
-         
-            
-           } },
+          },
         );
       },
       listener: (context, state) {
@@ -45,12 +43,5 @@ class CustomButtonBlocConsumer extends StatelessWidget {
         }
       },
     );
-
-    
   }
-
-  
-
-
-
 }

@@ -8,6 +8,5 @@ class PaymentSuccess extends PaymentState {}
 
 class PaymentFailure extends PaymentState {
   final String errorMessage;
-
   PaymentFailure({required this.errorMessage});
 }

@@ -1,7 +1,7 @@
 class DetailsModel {
   String? subtotal;
   String? shipping;
-  int? shippingDiscount;
+  String? shippingDiscount;
 
   DetailsModel({
     required this.subtotal,
@@ -12,7 +12,7 @@ class DetailsModel {
   factory DetailsModel.fromJson(Map<String, dynamic> json) => DetailsModel(
     subtotal: json['subtotal'] as String?,
     shipping: json['shipping'] as String?,
-    shippingDiscount: json['shipping_discount'] as int?,
+    shippingDiscount: json['shipping_discount'],
   );
 
   Map<String, dynamic> toJson() => {

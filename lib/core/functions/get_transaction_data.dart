@@ -1,18 +1,19 @@
-  import 'package:payment/features/checkout/data/models/amount%20model/amount_model.dart';
-import 'package:payment/features/checkout/data/models/amount%20model/details_model.dart';
-import 'package:payment/features/checkout/data/models/items_list_model/item.dart';
-import 'package:payment/features/checkout/data/models/items_list_model/items_list_model.dart';
+  import 'package:payment/features/checkout/data/models/paypal_models/amount%20model/amount_model.dart';
+import 'package:payment/features/checkout/data/models/paypal_models/amount%20model/details_model.dart';
+import 'package:payment/features/checkout/data/models/paypal_models/items_list_model/item.dart';
+import 'package:payment/features/checkout/data/models/paypal_models/items_list_model/items_list_model.dart';
 
 ({AmountModel amount, List<ItemsListModel> orders}) getTransactionData() {    // method return more than one data type
-    var amount = AmountModel(
-      total: "100",
-      currency: "USD",
-      details: DetailsModel(
-        subtotal: "100",
-        shipping: "0",
-        shippingDiscount: 0,
-      ),
-    );
+   var amount = AmountModel(
+  total: "100.00",
+  currency: "USD",
+  details: DetailsModel(
+    subtotal: "100.00",
+    shipping: "0.00",
+    shippingDiscount: "0.00",
+  ),
+);
+
 
     List<ItemsListModel> orderItems = [
       ItemsListModel(

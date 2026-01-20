@@ -10,8 +10,7 @@ class PaymentIntentInputModel // make the input of metho (amount,currency) as A 
     this.customerId,
   });
 
-  toJson() {
-    // Method to convert the model to json to send it to the api (Request body)
+  toJson() { // Method to convert the model to json to send it to the api (Request body)
     return {
       "amount":
           "${amount}00", // by Default Stripe Devided the Amount / 100 so i have to multiply mount by 100

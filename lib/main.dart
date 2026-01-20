@@ -5,12 +5,12 @@ import 'package:payment/core/utils/api_keys.dart';
 import 'package:payment/features/checkout/presentation/views/myCart_view.dart';
 
 void main() {
-  Stripe.publishableKey = ApiKeys.striePublishableKey;
-  runApp(DevicePreview(
+  Stripe.publishableKey = ApiKeys.stripePublishableKey;
+  runApp(
+    DevicePreview(
     enabled: false,
     builder:(context) => Checkout()));
 }
-
 class Checkout extends StatelessWidget {
   const Checkout({super.key});
 

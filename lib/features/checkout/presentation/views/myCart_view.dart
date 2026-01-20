@@ -51,8 +51,6 @@ class _MycartViewState extends State<MycartView> {
             CustomButton(
               title: 'Complete Payment',
               onTap: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) {
-                //   return PaymentDetailsView();
                 showModalBottomSheet(
                   context: context,
                   builder: (context) {
